@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="1">
+	<!-- Do not use parallel="methods" -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener
+			class-name="au.com.ibuynew.customlisteners.AnnotationTransformer"></listener>
+		<listener
+			class-name="au.com.ibuynew.customlisteners.CustomeListeners"></listener>
+	</listeners>
+	<test name="SetUp">
+		<classes>
+		
+		<class name="au.com.ibuynew.testcases.TestLoginPage" />
+
+<!-- 			<class name="au.com.ibuynew.testcases.TestLoginPage" />
+			<class name="au.com.ibuynew.testcases.TestRegistrationPage" />
+			<class name="au.com.ibuynew.testcases.TestDashboardPage" />
+			<class name="au.com.ibuynew.testcases.TestMyAccount" />
+			<class name="au.com.ibuynew.testcases.TestHomePage" />
+			<class name="au.com.ibuynew.testcases.TestByPropertiesTypePage" />
+			<class name="au.com.ibuynew.testcases.TestByStatePage" />
+			<class name="au.com.ibuynew.testcases.TestByCityPage" />
+			<class name="au.com.ibuynew.testcases.TestExpertAdvicePage" />
+			<class name="au.com.ibuynew.testcases.TestContactUsPage" />
+			<class name="au.com.ibuynew.testcases.TestValidationMessages" />
+			<class name="au.com.ibuynew.testcases.TestSearchPage" />
+			<class name="au.com.ibuynew.testcases.TestGenericFunctionality" />
+			<class name="au.com.ibuynew.testcases.TestPageLoadTime" /> -->
+
+
+			<!-- <class name="au.com.ibuynew.testcases.TestExpertAdvicePage">
+				<methods>
+					<include
+						name="testContactExpertFormAsVisitor" />
+				</methods>
+			</class> 
+			
+			<class name="au.com.ibuynew.testcases.TestByPropertiesTypePage">
+				<methods>
+					<include
+						name="testEnquireAboutOffMarketOppForApartmentsAsVisitor" />
+				</methods>
+			</class>
+			-->
+
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
